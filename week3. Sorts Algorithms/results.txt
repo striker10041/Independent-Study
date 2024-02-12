@@ -1,0 +1,5 @@
+Quick — 0.00215 ms
+Insertion — 0.04371 ms
+Heap — 0.07432 ms
+Shake — 0.13899 ms
+Bubble — 0.14401 ms
