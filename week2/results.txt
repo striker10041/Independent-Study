@@ -1,0 +1,137 @@
+Compiled Debug x64 ver. test
+The execution was carried out through the .exe file.
+The results were checked on a JSON file with a size of 146027 lines.
+
+BOOST PROPERTY TREE
+=========================
+1st run
+-------------------------
+Boost Property Tree Read time: 178.618 ms
+Boost Property Tree Parse time: 3241.11 ms
+Boost Property Tree Modify time: 1914.54 ms
+Boost Property Tree Write time: 1982.55 ms
+
+=========================
+2nd run
+-------------------------
+Boost Property Tree Read time: 175.325 ms
+Boost Property Tree Parse time: 3298.65 ms
+Boost Property Tree Modify time: 1711.14 ms
+Boost Property Tree Write time: 1929.86 ms
+
+=========================
+3rd run
+-------------------------
+Boost Property Tree Read time: 194.903 ms
+Boost Property Tree Parse time: 3305.61 ms
+Boost Property Tree Modify time: 1695.94 ms
+Boost Property Tree Write time: 1894.39 ms
+
+=========================
+4th run
+-------------------------
+Boost Property Tree Read time: 171.054 ms
+Boost Property Tree Parse time: 3202.35 ms
+Boost Property Tree Modify time: 1651.77 ms
+Boost Property Tree Write time: 1799.76 ms
+
+=========================
+5th run
+-------------------------
+Boost Property Tree Read time: 176.006 ms
+Boost Property Tree Parse time: 3222.54 ms
+Boost Property Tree Modify time: 1672.26 ms
+Boost Property Tree Write time: 1813.53 ms
+*************************
+
+
+*************************
+JSONCPP
+=========================
+1st run
+-------------------------
+JsonCpp Read time: 170.21 ms
+JsonCpp Parse time: 863.242 ms
+JsonCpp Modify time: 301.089 ms
+JsonCpp Write time: 909.833 ms
+=========================
+2nd run
+-------------------------
+JsonCpp Read time: 182.75 ms
+JsonCpp Parse time: 814.343 ms
+JsonCpp Modify time: 319.898 ms
+JsonCpp Write time: 869.667 ms
+
+=========================
+3rd run
+-------------------------
+JsonCpp Read time: 174.851 ms
+JsonCpp Parse time: 873.576 ms
+JsonCpp Modify time: 322.719 ms
+JsonCpp Write time: 903.149 ms
+
+=========================
+4th run
+-------------------------
+JsonCpp Read time: 189.482 ms
+JsonCpp Parse time: 853.459 ms
+JsonCpp Modify time: 301.836 ms
+JsonCpp Write time: 853.842 ms
+
+=========================
+5th run
+-------------------------
+JsonCpp Read time: 172.159 ms
+JsonCpp Parse time: 800.623 ms
+JsonCpp Modify time: 287.336 ms
+JsonCpp Write time: 853.745 ms
+
+
+*************************
+BOOST RESULTS:
+Average Read time: 179.1812 ms
+Average Parse time: 3254.052 ms
+Average Modify time: 1729.13 ms
+Average Write time: 1884.018 ms
+
+
+JSONCPP RESULTS:
+Average Read time: 177.8904 ms
+Average Parse time: 841.0486 ms
+Average Modify time: 306.5756 ms
+Average Write time: 878.0472 ms
+
+READING:
+Boost: 179.1812 ms
+JsonCpp: 177.8904 ms
+Difference: Boost is slower by 1.2908 ms
+Factor: Boost / JsonCpp = 179.1812 / 177.8904 ≈ 1.0073 times
+
+PARSING:
+Boost: 3254.052 ms
+JsonCpp: 841.0486 ms
+Difference: Boost is slower by 2412.0034 ms
+Factor: Boost / JsonCpp = 3254.052 / 841.0486 ≈ 3.8706 times
+
+MODIFICATION:
+Boost: 1729.13 ms
+JsonCpp: 306.5756 ms
+Difference: Boost is slower by 1422.5544 ms
+Factor: Boost / JsonCpp = 1729.13 / 306.5756 ≈ 5.6429 times
+
+WRITING:
+Boost: 1884.018 ms
+JsonCpp: 878.0472 ms
+Difference: Boost is slower by 1005.9708 ms
+Factor: Boost / JsonCpp = 1884.018 / 878.0472 ≈ 2.1459 times
+
+Total execution time for Boost Property Tree:
+179.1812 (reading) + 3254.052 (parsing) + 1729.13 (modification) + 1884.018 (writing) = 7046.3812 ms
+
+Total execution time for JsonCpp:
+177.8904 (reading) + 841.0486 (parsing) + 306.5756 (modification) + 878.0472 (writing) = 2203.5618 ms
+
+Comparison of total execution time:
+Boost to JsonCpp ratio = 7046.3812 / 2203.5618 ≈ 3.198
+
+JsonCpp is faster than Boost by 3.198 times
