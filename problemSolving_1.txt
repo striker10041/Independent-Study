@@ -1,0 +1,162 @@
+https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+________________________________________________________________________________________________________________
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        unordered_set<char> charSet;
+        int maxStr=0;
+        int left=0;
+        for(int right = 0; right< s.length(); right++){
+            if(charSet.count(s[right]) == 0){
+                charSet.insert(s[right]);
+                maxStr = max(maxStr, right-left+1);
+            } else {
+                while(charSet.count(s[right])){
+                    charSet.erase(s[left]);
+                    left++;
+                }
+            charSet.insert(s[right]);
+            }
+        }
+        return maxStr;
+    }
+};
+
+
+_________________________________________________________________________________________________________________
+
+
+
+https://codeforces.com/contest/1490/problem/C?locale=en
+
+_________________________________________________________________________________________________________________
+
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+ 
+int main() {
+    int n;
+    int flag;
+    cin >> n;
+    long long t;
+    for(int i = 0; i < n; i++) {
+        cin>>t;
+        flag = 0;
+        for(int j = 1; j <= 10000; j++) {
+            long long t1 = t - pow(j,3);
+            long double x = t1;
+            if(t1 > 0) {
+                x = cbrt(x);
+                t1 = cbrt(t1);
+                long double first = x;
+                long double second = t1;
+                if (first == second) {
+                    flag = 1;
+                    continue;
+                }
+            } else {
+                continue;
+            }
+        }
+        if(flag == 0){
+            cout << "NO"<<endl;
+        } else {
+            cout<< "YES"<<endl;
+        }   
+    }
+}
+
+
+_________________________________________________________________________________________________________________
+
+
+
+https://codeforces.com/contest/1399/problem/A
+
+
+_________________________________________________________________________________________________________________
+
+
+#include <iostream>
+#include <string.h>
+#include <vector>
+#include <algorithm>
+#include<bits/stdc++.h>
+using namespace std;
+
+ 
+int compare(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);
+}
+ 
+int main(){
+    int n;
+    int t;
+    cin>>n;
+    for(int i = 0; i < n; i++){
+        cin>>t;
+        int a[t],cnt=0;
+        for(int j = 0; j < t; j++){
+            cin>>a[j];
+        }
+        sort(a, a+t);
+        for(int k = 1; k < t; k++){
+            if( (a[k] - a[k-1]) > 1){
+                cout<<"NO"<<endl;
+                cnt++;
+                break;
+            }
+        }
+        if(cnt == 0)
+            cout<<"YES"<<endl;
+    }
+}
+
+__________________________________________________________________________________________________________________
+
+
+https://codeforces.com/contest/141/problem/A
+__________________________________________________________________________________________________________________
+
+
+
+
+#include <iostream>
+#include <string.h>
+#include <vector>
+#include <algorithm>
+using namespace std;
+ 
+int main()
+{
+    string str1,str2,str3;
+    cin>>str1>>str2>>str3;
+    str1=str1+str2;
+    int cnt=0;
+    if(str1.length()!=str3.length()){
+        cout<<"NO";
+        return 0;
+    }
+    for(int i = 0; i < str3.length(); i++){
+        for(int j = 0; j < str1.length(); j++){
+            if(str3[i] == str1[j] && str3[i]!='1'){
+                cnt++;
+                str3[i]='1';
+                str1[j]='1';
+            }
+        }
+        
+    }
+
+    if((cnt*2) == ( str3.length()*2 ) )
+        cout<<"YES";
+    else
+        cout<<"NO";
+    
+}
+
+
+__________________________________________________________________________________________________________________
