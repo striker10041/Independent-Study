@@ -1,0 +1,4 @@
+﻿  WildCards.cpp
+C:\Users\Alex\source\repos\WildCards\WildCards\WildCards.cpp(7,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Alex\source\repos\WildCards\WildCards\WildCards.cpp(8,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  WildCards.vcxproj -> C:\Users\Alex\source\repos\WildCards\x64\Debug\WildCards.exe
